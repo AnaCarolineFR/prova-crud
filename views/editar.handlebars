@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Tela de Edição</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=wtXZEf1aA8T6_Zv30JJXcJ4XmDlMJkDDn1C9cmSNgY0Mhts1RR8v8r2BwpG5ojDus1qYZVR5iCoulfXAepZuaWp-iyPEJGoYPtBp7dfzje8UZMzEfp02NPP1F32BG7_1EVn_Ij6rAU15f1G4ZyVxJ8r9fJwcIFpuza6XwQolHPTg6u1viVaRb2j13TYqKvFX3fAP5s6PbbR1s3Jylj9tHwQ-w6bf50guZQc6rlK0CgW_lncsIkGYC0g6SZvl5X-IjVOPXs4q3KHjlmkEbDOm9GLe4bb6UIKHQx_bv0L2c0NsLLljt5zlTXSzbfihzWZXuebuDSP1zey9io5gDnYIq6qC9RkLYxcPV1eoODijoyLFqDUYw34FVu2Vfzvi5enDeOdQa6krMVUGAELQlzBx-SwWsB9BC9AVgoU8ENXTRSq1g_ipLA2vUYPS2RjXCqZ79uSM0GUypitHGOsU9Hr6Js9I_hqaciNyrg9IUV90GZs7yDuyN0fESOh4yYs82fb8av4f3i-GNDCDwCjQeQvdiFih6r1jYPjTqd05ewYKG1gvgkv1BvWuErK98-GjsCQbz66HAGMVCQgZEk2aKIvXT7SvwHHx58TCPD8ejZNMeexqqKkxPoEhBPE_HHpU-g9_s3QM04X_4XbBAgJM1V7eW5IZJPR7pNLRmBGpzAcngHpzh_MKAyejmQ1RT-6pEX0P72KZCzqQIlZuoIqNXSuC4AvKHxCnuv6fDA3jp3fwTVyZ-Pb3bcfYKCHkMcj8fAfM8YJG8IdtvmO50GgzHcZGigpRSmOBCTYxvTbwf2WxKf9pOV6E2yuCWMhVoo_BjbDva_aVUD-BUPFIEoNq0vs4HGcu90l5aRlcfSy5FJ1vSC9ZR5eZtSPgmtIOszeiGbjBVQyj5kQMcml_mfDeMz_R61mhToF7bwV3lnakoBkuFehvy-60nNUBXV0dcbFnsihd0Sdm6s23cXQiMk2aJ-XKsk0ZwhmCdjAdnzSQ_BuSBT38sKMaZyOYC2JZ246tvoJX-3O0AohUMhjNJ72kFWemK2jwhrEViPJlwzfqKXaaa8ea3TyYKiegw-A-WH2LYGNkQvyLeHqm3Iu05mEiB_NFb8HcUJ6c3KF2Ztbtb8YxGCW9EVs7fNDzn2soLiRUuaRhm0Anlyyi5DWOgYMJ4BjAGfqPvbmfrqcqOHVL4qiyBg6b0DjHubkm6661W93a-qOjhYr50TUkhpJNJ8PNotuZ63MuCePvrUn0qpjYvWERuWhXugQOPxqM0ieHk5TPDQTK0BwHeO2bVQq_VQ5QJdP2jG29xQFgr-MlOMQSV6HQ515Q0QyR6eeDB1YIv9UJAc_UR7DZiygrTWXfnZlVVjaqvBwIyDQB3bKiVR4DYkY4hH4c_roQxZ6Iu85pXWej-ehbCTHJ6QUZPa1RM4sTDxLMHpl0EUKU2Tf6rjUUpvvvi1oYT1arMjohU41VmDuvVM7wvU7_B-Yd1WTjpRckkvsU70xS6fuVHa_gNdvepIyPDA3AblEszJf3DGeES7wV_jWJBvBN3A6MxNA7Z-yaTh7iT7sGY3IuIn_t0olV9jU1TOX9m1SnXkHvYg-cJCgIytKl-6fg13vd5t475XOb9OhGpOscVI1_ry0c9GY6WbH-P6h4CroAMvSJooa8j6vLyc8-6-UQT8jpvlKNYzE1HwcPYKESqpgy66QlY0DMv0gTUqEia1eUwvW2yu7Zb3pf-kxL-YSFKAVMDnxMRqt5TSuWfjQudxzJl7TpgTNzx4l2Hfhw9Zz9I0Ggop2dQDLeD3ogdyEY2qGPZwp7r3IzY0v0dnxZxGQxXqSeehEtf987Lmg" charset="UTF-8"></script></head>
+<body>
+    <div class="container">
+        <h1>Tela de Edição</h1>
+        {{#each post}}
+            {{#dataValues}}  
+                    <form action="/atualizar" method="POST">
+                        <div class="form-group">
+                            <input type="hidden" name="id" class="form-control" id="id" value="{{id}}">
+                            <label for="nome">Nome:</label>
+                            <input name="nome" type="text" class="form-control" id="nome" placeholder="Digite o nome" value="{{nome}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço:</label>
+                            <input name="endereco" type="text" class="form-control" id="endereco" placeholder="Digite o endereço"  value="{{endereco}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Bairro:</label>
+                            <input name="bairro" type="text" class="form-control" id="bairro" placeholder="Digite o bairro" value="{{bairro}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="cep">CEP:</label>
+                            <input name="cep" type="text" class="form-control" id="cep" placeholder="Digite o CEP" value="{{cep}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade:</label>
+                            <input name="cidade" type="text" class="form-control" id="cidade" placeholder="Digite a cidade" value="{{cidade}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <input name="estado" type="text" class="form-control" id="estado" placeholder="Digite o estado" value="{{estado}}">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+          {{/dataValues}}
+    {{/each}}  
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
